@@ -1,6 +1,13 @@
 @tailwind base;
 @tailwind components;
 
+
+/* only dev classes */
+.flex, .child-flex > * {
+  flex: unset !important;
+  max-width: unset !important;
+}
+
 /* poppins-100 - latin */
 @font-face {
   font-family: "PoppinsCustom";
