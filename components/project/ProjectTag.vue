@@ -11,7 +11,7 @@
             color === 'pink' ? 'bg-pink-100 text-pink-500 hover:bg-opacity-100' : null,
             !color ? 'bg-transparent text-gray-500 hover:text-gray-700' : null,
         ]"
-        class="table px-3 py-1 text-sm font-medium transition-all duration-75 ease-linear bg-opacity-75 rounded cursor-pointer whitespace-nowrap">
+        class="table px-2 py-1 text-xs font-medium transition-all duration-75 ease-linear bg-opacity-75 rounded cursor-pointer 3xl:text-sm whitespace-nowrap">
         <slot/>
     </div>
 </template>

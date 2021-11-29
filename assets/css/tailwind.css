@@ -3,9 +3,34 @@
 
 
 /* only dev classes */
-.flex, .child-flex > * {
+/* .flex, .child-flex > * {
   flex: unset !important;
   max-width: unset !important;
+} */
+/* end only dev classes */
+
+
+html, body, #__nuxt, #__layout, #__layout main {
+  height: 100%;
+}
+
+img { 
+  -webkit-user-drag: none; 
+  -khtml-user-drag: none; 
+  -moz-user-drag: none; 
+  -o-user-drag: none; 
+  user-drag: none; 
+}
+
+/* NanumPen */
+@font-face {
+  font-family: 'Nanum Pen';
+  src: url('~assets/fonts/NanumPen/NanumPen.woff2') format('woff2'),
+      url('~assets/fonts/NanumPen/NanumPen.woff') format('woff'),
+      url('~assets/fonts/NanumPen/NanumPen.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* poppins-100 - latin */

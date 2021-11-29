@@ -50,30 +50,39 @@ $delays: 75, 100, 150, 200, 300, 500, 550, 600, 650, 700, 750, 800, 850, 900, 95
 // fade in up
 @keyframes fadeInUp {
     from {
-        transform: translate3d(0,10px,0)
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
     }
-
+  
     to {
-        transform: translate3d(0,0,0);
-        opacity: 1
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
     }
 }
 
 @-webkit-keyframes fadeInUp {
     from {
-        transform: translate3d(0,10px,0)
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
     }
-
+    
     to {
-        transform: translate3d(0,0,0);
-        opacity: 1
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
     }
 }
 
+
 .fadeInUp {
-    opacity: 0;
     animation-name: fadeInUp;
-    -webkit-animation-name: fadeInUp;
+}
+
+/* fade */
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .25s;
+}
+.fade-enter, .fade-leave-to {
+    opacity: 0;
 }
 
 /* slide horizontal */
@@ -85,4 +94,27 @@ $delays: 75, 100, 150, 200, 300, 500, 550, 600, 650, 700, 750, 800, 850, 900, 95
 .slide-enter,
 .slide-leave-to {
     transform: translateX(-110%);
+}
+
+/* slide vertical */
+.slide-up-enter-active,
+.slide-up-leave-enter, .slide-up-leave-active {
+    transform: translateY(0%);
+    transition: all 1s cubic-bezier(0.77,0,0.18,1);
+}
+.slide-up-enter,
+.slide-up-leave-to {
+    transform: translateY(-110%);
+}
+
+/* slide from bottom */
+/* slide vertical */
+.slide-bottom-enter-active,
+.slide-bottom-leave-enter, .slide-bottom-leave-active {
+    transform: translateY(0%);
+    transition: all .5s cubic-bezier(0.77,0,0.18,1);
+}
+.slide-bottom-enter,
+.slide-bottom-leave-to {
+    transform: translateY(200%);
 }

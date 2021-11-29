@@ -1,102 +1,42 @@
 <template>
-<div>
-    <div class="p-6 mx-auto lg:p-0 2xl:max-w-screen-xl 3xl:max-w-screen-2xl lg:grid lg:grid-cols-12 2xl:py-0 2xl:pt-10 2xl:pb-24 3xl:py-28">
-        <div class="flex flex-col items-start justify-center col-span-5 mb-10 lg:mb-0">
-            <ProjectTag class="mb-5" color="yellow">
-                Built Environment
-            </ProjectTag>
-            <h1 class="text-2xl font-semibold leading-normal 3xl:leading-normal 3xl:text-5xl 2xl:text-3xl">
-                Europees marktonderzoek naar industriële renovaties
-            </h1>
-            <p class="max-w-lg my-5 text-xs font-medium leading-loose text-gray-500 lg:text-sm 3xl:text-base">
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
-            </p>
-            <div class="flex">
-                <Button color="green">
-                    Check het project
-                </Button>
-                <Button>
-                    Of neem direct contact op
-                </Button>
-            </div>
+<div class="flex flex-col items-center justify-center w-full mt-14">
+    <h1 class="mb-5 text-2xl font-semibold leading-normal text-center 2xl:leading-normal 3xl:leading-relaxed 2xl:text-6xl">
+        <span class="fadeIn a-duration-500 a-delay-100">De Retrofit homepage.</span>
+        <br>
+        <span class="text-green-500 fadeIn a-duration-500 a-delay-300">Coming soon.</span>
+    </h1>
+    <p class="text-base font-medium leading-8 tracking-wider text-center text-opacity-50">
+        <span>Binnenkort zal de Retrofit homepage en de vernieuwde webapplicatie beschikbaar zijn.</span>
+        <br />
+        <span>Bij ons willen aansluiten? Bekijk onze beschikbare <nuxt-link class="text-green-500 hover:underline" to="/projects">projecten.</nuxt-link></span>
+    </p>
+    <div class="fixed bottom-0 left-0 w-full">
+        <div class="absolute flex flex-col items-center cursor-pointer left-20 group fadeIn a-duration-500 a-delay-300"> 
+            <p class="w-48 mb-10 text-xl transform -rotate-30 font-handwrite group-hover:text-green-500">Ook willen specialiseren in 3D modelleren? Check nu de opdracht gericht op GIS</p>
+            <svg class="h-auto text-black stroke-current w-14 group-hover:text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 35">
+                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5">
+                    <path d="M48.569 27.616c-4.254-4.052-15.443 2.992-20.225 3.767-18.011 2.916-23.035-13.832-27.109-28.1" />
+                    <path stroke-linejoin="round" d="M41.907 31.488c3.811-2.175 7.875-.701 11.857-2.026-2.17-2.355-6.355-7.329-6.883-10.66" />
+                </g>
+            </svg>
         </div>
-        <div class="lg:col-start-7 lg:col-end-13">
-            <div class="relative">
-                <img class="relative z-20 object-cover w-full rounded-lg h-rem-20 2xl:h-rem-30 3xl:h-rem-40 fadeIn a-duration-500 a-delay-100" src="https://images.unsplash.com/photo-1528543606781-2f6e6857f318?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=930&q=80">
-                <div class="absolute inset-0 z-10 items-end hidden w-full h-full px-4 py-2 transform bg-green-500 rounded-lg fadeIn a-duration-500 a-delay-500 lg:flex 3xl:px-5 3xl:py-5 translate-x-14 translate-y-14 3xl:translate-x-20 3xl:translate-y-20">
-                    <a href="#" class="flex items-center space-x-3 group">
-                        <div class="w-10 h-10 p-1 bg-white rounded-full bg-opacity-70">
-                            <img class="object-cover rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80">
-                        </div>
-                        <div>
-                            <p class="text-xs leading-none tracking-wide text-white text-opacity-70">contactpersoon:</p>
-                            <span class="text-xs font-medium leading-none text-white 3xl:text-sm group-hover:underline">Rogier Laterveer</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div>
-        <div class="sticky top-0 w-full py-6 space-x-5 bg-white shadow-xl">
-            <div class="flex max-w-4xl ml-5 overflow-auto lg:max-w-full lg:justify-center scrollbar-hide lg:scrollbar-default">
-                <ProjectTag v-for="category in categories" :key="category.id" :color="activeCategory.id == category.id ? category.color : null" @click="activeCategory = category">
-                    {{ category.name }}
-                </ProjectTag>
-            </div>
-        </div>
-        <div class="py-10 mx-auto lg:grid-cols-3 2xl:max-w-screen-xl 3xl:max-w-screen-2xl lg:grid lg:gap-8">
-            <nuxt-link v-for="index in 14" :key="index" class="p-6 lg:p-0" to="/project/1">
-                <ProjectCard title="Ontwikkelen van bouwtechnische classificatiemethoden van laagbouw" description="Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.">
-                    <img class="object-cover w-full h-auto rounded-md" src="/images/php_background.jpg" />
-                </ProjectCard>
-            </nuxt-link>
-        </div>
+        <svg class="mx-auto text-green-400 fill-current h-52" xmlns="http://www.w3.org/2000/svg" overflow="hidden" viewBox="0 0 1252 213">
+            <defs>
+                <clipPath id="a">
+                    <path d="M7 229h1252v213H7z" />
+                </clipPath>
+            </defs>
+            <g clip-path="url(#a)" transform="translate(-7 -229)">
+                <path d="M8.123 552.999h1249.751c0-178.94-279.642-324-624.693-324-345.415 0-625.058 145.06-625.058 324z" />
+            </g>
+        </svg>
     </div>
 </div>
 </template>
 
 <script>
-import Button from '../components/base/Button';
-import ProjectTag from '../components/project/ProjectTag';
-import ProjectCard from '../components/project/ProjectCard';
-
 export default {
     name: 'index',
-    data() {
-        return {
-            activeCategory: {
-                id: 0,
-                name: 'All',
-                color: 'gray'
-            },
-            categories: [{
-                    id: 0,
-                    name: 'All',
-                    color: 'gray'
-                },
-                {
-                    id: 1,
-                    name: 'Build Environment',
-                    color: 'yellow'
-                },
-                {
-                    id: 2,
-                    name: 'CMD',
-                    color: 'green'
-                },
-                {
-                    id: 3,
-                    name: 'Commerciële Economie',
-                    color: 'red'
-                }
-            ]
-        }
-    },
-    components: {
-        Button,
-        ProjectTag,
-        ProjectCard
-    }
+    transition: "fade"
 }
 </script>

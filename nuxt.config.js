@@ -20,7 +20,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '~/plugins/vuetify-parallax.js', mode: 'client' }
+    // { src: '~/plugins/vuetify-parallax.js', mode: 'client' },
+    { src: '~/plugins/vue-observe-visibility.js', mode: 'client' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
